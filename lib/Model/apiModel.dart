@@ -4,6 +4,7 @@ class ApiModel {
   var downloads;
   var likes;
   String user;
+  String tags;
 
   ApiModel({
     required this.pageURL,
@@ -11,6 +12,7 @@ class ApiModel {
     required this.downloads,
     required this.likes,
     required this.user,
+    required this.tags,
   });
 
   factory ApiModel.formJSON({required Map data}) {
@@ -20,6 +22,7 @@ class ApiModel {
       downloads: data['downloads'],
       likes: data['likes'],
       user: data['user'],
+      tags: data['tags'],
     );
   }
 }
